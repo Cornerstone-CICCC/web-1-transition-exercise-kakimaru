@@ -1,0 +1,70 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: yellow;
+  transition: all 0.5s;
+  position: absolute;
+  animation: task2 10s linear infinite;
+}
+.circle:hover {
+  opacity: 0;
+}
+
+.loading {
+  width: 400px;
+  height: 100px;
+  background-color: #ececec;
+  padding: 4px;
+}
+
+.bar {
+  height: 100%;
+  background-color: green;
+  animation: task3 3s linear infinite;
+}
+
+@keyframes task2 {
+  0% {
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 200px);
+    border-radius: 0;
+  }
+  50% {
+    top: calc(100% - 200px);
+    right: 0;
+    left: inherit;
+    border-radius: 50%;
+  }
+  75% {
+    bottom: 0;
+    right: calc(100% - 200px);
+    border-radius: 0;
+  }
+  100% {
+    bottom: calc(100% - 200px);
+    left: 0;
+    border-radius: 50%;
+  }
+}
+@keyframes task3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
